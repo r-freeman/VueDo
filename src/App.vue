@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <b-container>
+        <b-container class="my-5">
             <b-row>
                 <b-col>
                     <TodoList/>
