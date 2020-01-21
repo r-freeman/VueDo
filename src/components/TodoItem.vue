@@ -6,7 +6,8 @@
             <b-button
                 v-if="todo.done"
                 pill
-                variant="outline-danger">&#10005;</b-button>
+                variant="outline-danger"
+                @click="undoTodo(todo)">&#10005;</b-button>
             <b-button
                 v-else
                 pill
@@ -23,6 +24,9 @@
         methods: {
             completeTodo(todo) {
                 this.$emit("complete-todo", todo);
+            },
+            undoTodo(todo) {
+                this.$emit("undo-todo", todo)
             }
         }
     }
