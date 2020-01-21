@@ -4,6 +4,10 @@
 
 ![Screenshot of VueDo app](http://violet-grain.surge.sh/violet-grain.surge.sh_.png)
 
+## Demo
+
+Try the app [here](http://violet-grain.surge.sh/)
+
 ## Project setup
 ```
 yarn install
