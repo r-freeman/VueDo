@@ -85,18 +85,44 @@
                 });
 
                 this.newTodo = "";
+
+                // save new todo to storage
+                this.saveList();
             },
             completeTodo(todo) {
                 const todoIndex = this.list.indexOf(todo);
                 this.list[todoIndex].done = true;
+
+                // save completed todo to storage
+                this.saveList();
             },
             undoTodo(todo) {
                 const todoIndex = this.list.indexOf(todo);
                 this.list[todoIndex].done = false;
+
+                // save undone todo to storage
+                this.saveList();
             },
             deleteTodo(todo) {
                 const todoIndex = this.list.indexOf(todo);
-                this.$delete(this.list, todoIndex)
+                this.$delete(this.list, todoIndex);
+
+                // save deleted todo to storage
+                this.saveList();
+            },
+            saveList() {
+                const parsed = JSON.stringify(this.list);
+                localStorage.setItem('list', parsed);
+            }
+        },
+        mounted() {
+            // retrieve todo list from storage
+            if(localStorage.getItem('list')) {
+                try {
+                    this.list = JSON.parse(localStorage.getItem('list'));
+                } catch (e) {
+                    localStorage.removeItem('list');
+                }
             }
         }
     }
