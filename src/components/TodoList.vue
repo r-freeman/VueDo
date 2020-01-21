@@ -2,7 +2,11 @@
     <div>
         <b-card header="VueDo" header-tag="header">
             <b-list-group>
-                <TodoItem v-on:complete-todo="completeTodo" v-on:undo-todo="undoTodo" v-for="item in list" :todo="item" :key="item.key"/>
+                <TodoItem
+                        v-on:complete-todo="completeTodo"
+                        v-on:undo-todo="undoTodo"
+                        v-on:delete-todo="deleteTodo"
+                        v-for="item in list" :todo="item" :key="item.key"/>
             </b-list-group>
             <template v-slot:footer>
                 <input type="text" v-model="newTodo" v-on:keyup.enter="addNewTodo()">
@@ -89,6 +93,10 @@
             undoTodo(todo) {
                 const todoIndex = this.list.indexOf(todo);
                 this.list[todoIndex].done = false;
+            },
+            deleteTodo(todo) {
+                const todoIndex = this.list.indexOf(todo);
+                this.$delete(this.list, todoIndex)
             }
         }
     }
