@@ -24,37 +24,42 @@
                     {
                         id: 1,
                         text: "Put on an ice pack",
-                        done: true
+                        done: false
                     },
                     {
                         id: 2,
                         text: "1000 stomach crunches",
-                        done: true
+                        done: false
                     },
                     {
                         id: 3,
-                        text: "Use a deep pore cleanser lotion",
-                        done: true
+                        text: "Deep pore cleanser lotion",
+                        done: false
                     },
                     {
                         id: 4,
-                        text: "Use a water activated gel cleanser",
-                        done: true
+                        text: "Water activated gel cleanser",
+                        done: false
                     },
                     {
                         id: 5,
-                        text: "Use a honey almond body scrub with an exfoliating gel scrub",
-                        done: true
+                        text: "Honey almond body scrub with an exfoliating gel scrub",
+                        done: false
                     },
                     {
                         id: 6,
                         text: "Apply an herb mint facial mask, leave on for 10 minutes",
-                        done: true
+                        done: false
                     },
                     {
                         id: 7,
-                        text: "Use an aftershave lotion with little or no alcohol",
-                        done: true
+                        text: "Aftershave lotion with little or no alcohol",
+                        done: false
+                    },
+                    {
+                        id: 8,
+                        text: "Then moisturizer, then an anti-aging eye balm",
+                        done: false
                     }
                 ],
                 newTodo: ""
