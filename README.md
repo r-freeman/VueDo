@@ -1,4 +1,8 @@
-# vue-do
+# VueDo
+
+## A todo app made with Vue.js.
+
+![Screenshot of VueDo app](http://violet-grain.surge.sh/violet-grain.surge.sh_.png)
 
 ## Project setup
 ```
