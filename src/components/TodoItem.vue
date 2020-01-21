@@ -21,8 +21,8 @@
         name: "TodoItem",
         props: ['todo'],
         methods: {
-            completeTodo() {
-
+            completeTodo(todo) {
+                this.$emit("complete-todo", todo);
             }
         }
     }
